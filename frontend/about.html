@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Hardware Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://www.shutterstock.com/image-photo/yellow-hardware-tools-on-black-260nw-1536392060.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #f4f6f9;
+        }
+
+        .navbar {
+            background-color: rgba(0, 86, 179, 0.95);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #ffd700; /* Gold hover effect */
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            color: #f9f9f9;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        h2, h3 {
+            color: #ffd700;
+            margin: 0 0 15px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin: 10px 0;
+            color: #e0e0e0;
+        }
+
+        .feature-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .feature-item {
+            background-color: #ffd700;
+            color: #003d7a;
+            padding: 15px;
+            border-radius: 5px;
+            flex: 1 1 200px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            min-width: 180px;
+        }
+
+        .feature-item:hover {
+            transform: scale(1.05);
+            background-color: #ffe066;
+        }
+
+        .promotion-section {
+            background-color: #ffd700;
+            color: #003d7a;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .promotion-section p {
+            font-size: 1.1rem;
+            margin: 8px 0;
+        }
+
+        .business-line {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #ff4500; /* Vibrant orange color to make it stand out */
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: rgba(0, 86, 179, 0.95);
+            color: white;
+            margin-top: 20px;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-image {
+            width: 40%; /* Further reduced width */
+            max-width: 400px; /* Maximum width for larger screens */
+            height: auto;
+            border-radius: 10px;
+            margin: 20px auto; /* Center the image */
+            display: block; /* Ensure it behaves as a block element */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">Hardware Solutions</div>
+        <div>
+            <a href="about.html">About</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Your Trusted Partner for Hardware Solutions</h2>
+        <p>We specialize in delivering top-notch hardware solutions that cater to various user needs with reliability and efficiency.</p>
+    
+        <h3>Core Features</h3>
+        <div class="feature-box">
+            <div class="feature-item"><strong>User Registration:</strong> Simple and secure registration process.</div>
+            <div class="feature-item"><strong>Secure Login:</strong> Robust security for data protection.</div>
+            <div class="feature-item"><strong>Role-Based Access:</strong> Customized experiences for every user role.</div>
+            <div class="feature-item"><strong>Data Management:</strong> Streamlined data storage and access.</div>
+        </div>
+    
+        <img src="https://cdn.create.vista.com/api/media/medium/338380748/stock-photo-top-view-tool-set-nuts-wood-screws-yellow-background?token=" alt="Hardware Tools" class="hero-image">
+    
+        <div class="promotion-section">
+            <h3>Exclusive Deals on Hardware Tools!</h3>
+            <p>Enjoy significant discounts on a variety of tools. Buy now and benefit from our high-quality offerings!</p>
+            <p class="business-line">Your satisfaction is our business success!</p>
+        </div>
+    </div>
+    
+
+    <footer>
+        <p>&copy; 2024 Hardware Solutions. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

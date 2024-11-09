@@ -1,0 +1,271 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - New Rathna Traders</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .category-heading {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 2.5em;
+            color: #005b96;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+         .sidebar {
+            width: 250px;
+            background-color: #003366;
+            padding-top: 100px;
+            position: fixed;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+        }
+
+        .sidebar img {
+            width: 120px;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            width: 90%;
+            text-align: center;
+            padding: 12px;
+            margin: 5px 0;
+            background-color: #00509e;
+            border-radius: 5px;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+
+        .sidebar a:hover {
+            background-color: #003366;
+        }
+
+        .content {
+            margin-left: 240px;
+            padding: 20px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-image {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            color: #FFD700; /* Gold color */
+            margin: 5px 0;
+        }
+
+        .see-more-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .see-more-button button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #005b96;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .see-more-button button:hover {
+            background-color: #004080;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #005b96;
+            color: white;
+        }
+
+        img {
+            width: 50px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        button[type="submit"] {
+            background-color: #005b96;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #004080;
+        }
+        
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .search-bar input {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <img src="https://cbx-prod.b-cdn.net/COLOURBOX54037532.jpg?width=800&height=800&quality=70" alt="Icon">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="products.html">Products</a>
+        <a href="../backend/cart.php">Cart</a>
+        <a href="contacts.html">Contacts</a>
+        <a href="logout.php">Log Out</a>
+    </div>
+
+    <div class="content">
+        <h2 class="category-heading">Products</h2>
+        
+        <!-- Search bar -->
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search products..." onkeyup="filterProducts()">
+        </div>
+        
+        <h2 class="category-heading">Agricultural Tools</h2>
+        <div class="products" id="agriculturalTools">
+            <div class="product" data-category="agricultural">
+                <img src="https://ae01.alicdn.com/kf/Sd1ee02a096e6400f8e8b09345e1d5194M/Gardening-Hoe-Weeding-Rake-Steel-Farm-Tool-Grasping-Raking-Level-Loosen-Soil-Harrow-Clean-Leaves-Collect.jpg" alt="Agricultural Tool 1" class="product-image">
+                <h3>Agricultural Tool - Hoe</h3>
+                <p>Description: A high-quality hoe designed for effective soil cultivation.</p>
+                <p class="rating">⭐⭐⭐⭐⭐</p>
+                <p>Benefits: Ideal for loosening soil, weeding, and harvesting. Perfect for both professional and hobbyist gardeners.</p>
+            </div>
+            <div class="product" data-category="agricultural">
+                <img src="https://ae01.alicdn.com/kf/S0caae0bdab0b46d8b4e09a9caf0d44187/Dethatcher-Rake-High-Quality-Carbon-Steel-Hand-Rake-Tines-Rake-Dethatching-Weeding-Acreage-Rake-Rock-Gravel.jpg" alt="Agricultural Tool 2" class="product-image">
+                <h3>Agricultural Tool - Dethatcher Rake</h3>
+                <p>Description: A robust dethatcher rake for effective lawn care.</p>
+                <p class="rating">⭐⭐⭐⭐⭐</p>
+                <p>Benefits: Removes dead grass and promotes healthier turf. Ensure your lawn remains lush and green.</p>
+            </div>
+        </div>
+
+        <h2 class="category-heading">Power Tools</h2>
+        <div class="products" id="powerTools">
+            <div class="product" data-category="power">
+                <img src="https://www.traqline.com/wp-content/uploads/2024/01/Power-Tools-banner.jpg" alt="Power Tool 1" class="product-image">
+                <h3>Power Tool - Drill</h3>
+                <p>Description: An efficient drill for various drilling tasks, perfect for both home and professional use.</p>
+                <p class="rating">⭐⭐⭐⭐</p>
+                <p>Benefits: Lightweight design for easy handling and enhanced control.</p>
+            </div>
+            <div class="product" data-category="power">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnSYSWGPoSgC3yeIvrPv6_x5rZNNAtOrMkjA&s" alt="Power Tool 2" class="product-image">
+                <h3>Power Tool - Saw</h3>
+                <p>Description: A durable saw for cutting wood and other materials.</p>
+                <p class="rating">⭐⭐⭐⭐</p>
+                <p>Benefits: Offers high precision and fast cutting speed, making your projects easier.</p>
+            </div>
+        </div>
+
+        <h2 class="category-heading">Fertilizers (Pohora Products)</h2>
+        <div class="products" id="fertilizers">
+            <div class="product" data-category="fertilizer">
+                <img src="https://cdn.baurs.com/images/agriculture/innerpages/fert.jpg" alt="Fertilizer 1" class="product-image">
+                <h3>Fertilizer - Nitrogen</h3>
+                <p>Description: High-quality nitrogen fertilizer for healthy plant growth.</p>
+                <p class="rating">⭐⭐⭐⭐⭐</p>
+                <p>Benefits: Ensures lush, green plants by supporting photosynthesis.</p>
+            </div>
+            <div class="product" data-category="fertilizer">
+                <img src="https://www.plantsandseeds.biz/storage/products/1635400524_elu-pohora.jpeg" alt="Fertilizer 2" class="product-image">
+                <h3>Fertilizer - Phosphorus</h3>
+                <p>Description: Essential phosphorus fertilizer for strong root development.</p>
+                <p class="rating">⭐⭐⭐⭐</p>
+                <p>Benefits: Improves plant resilience and yields a better harvest.</p>
+            </div>
+        </div>
+
+        <div class="see-more-button">
+            <button type="submit" onclick="location.href='../backend/more_product.php'">See More Products</button>
+        </div>
+    </div>
+
+    <script>
+        function filterProducts() {
+            const input = document.getElementById("searchInput").value.toLowerCase();
+            const products = document.querySelectorAll(".product");
+
+            products.forEach((product) => {
+                const name = product.querySelector("h3").textContent.toLowerCase();
+                if (name.includes(input)) {
+                    product.style.display = "block";
+                } else {
+                    product.style.display = "none";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
